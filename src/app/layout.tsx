@@ -5,6 +5,7 @@ import { Providers } from "@/components/Providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Inter } from "next/font/google";
+import Metrika from "@/components/Metrika";
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 const geistSans = Geist({
@@ -44,6 +45,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <Metrika />
         </Providers>
       </body>
     </html>
