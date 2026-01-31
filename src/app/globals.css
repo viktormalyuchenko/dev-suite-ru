@@ -21,6 +21,7 @@
 }
 
 :root {
+  color-scheme: light dark;
   --background: #ffffff;
   --foreground: #09090b; /* Почти черный */
   --card: #ffffff;

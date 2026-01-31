@@ -34,7 +34,7 @@ export default function SmartImage({ id, name, type }: SmartImageProps) {
       <div className="w-16 h-16 shrink-0">
         {!error ? (
           <img
-            src={`/tools/${id}-icon.webp`}
+            src={`/tools/${id}-favicon.webp`}
             alt={`${name} icon`}
             className="w-16 h-16 object-contain rounded-2xl border border-border shadow-sm bg-card"
             onError={() => setError(true)}

@@ -96,7 +96,7 @@ export default async function ToolPage({
             <SmartImage id={tool.id} name={tool.name} type="screenshot" />
 
             {/* Описание (Markdown) */}
-            <div className="bg-card rounded-3xl p-8 border border-border shadow-sm">
+            <div className="bg-card rounded-3xl p-8 pt-6 border border-border shadow-sm mt-6">
               <article className="prose prose-slate dark:prose-invert max-w-none prose-headings:text-foreground prose-headings:font-black prose-p:text-foreground/90 rose-p:leading-relaxed prose-li:text-foreground/90 prose-strong:text-foreground prose-strong:font-bold">
                 <ReactMarkdown>{tool.description_markdown}</ReactMarkdown>
               </article>
@@ -136,9 +136,12 @@ export default async function ToolPage({
                     <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-tight mb-0.5">
                       Категория
                     </p>
-                    <p className="text-sm font-semibold text-foreground leading-none">
+                    <Link
+                      href={`/categories/${encodeURIComponent(tool.category)}`}
+                      className="text-sm font-semibold text-foreground hover:text-primary transition-colors cursor-pointer block leading-none"
+                    >
                       {tool.category}
-                    </p>
+                    </Link>
                   </div>
                 </div>
 

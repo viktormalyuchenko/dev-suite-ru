@@ -14,8 +14,8 @@ export default function Header() {
   const navLinks = [
     { name: "Инструменты", href: "/" },
     { name: "Категории", href: "/categories" },
-    { name: "Коллекции", href: "#" }, // Пока заглушки
-    { name: "Реклама", href: "#" },
+    { name: "Коллекции", href: "/collections" },
+    // { name: "Реклама", href: "#" },
   ];
 
   return (
@@ -50,15 +50,15 @@ export default function Header() {
           {/* Правая часть: Поиск, Тема, Кнопки */}
           <div className="flex items-center gap-2 sm:gap-4">
             {/* Поиск */}
-            <button className="p-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+            {/* <button className="p-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
               <Search className="w-5 h-5" />
-            </button>
+            </button> */}
 
             {/* Переключатель темы (наш новый компонент) */}
             <ThemeToggle />
 
             {/* Кнопки действий */}
-            <div className="hidden sm:flex items-center gap-2">
+            {/* <div className="hidden sm:flex items-center gap-2">
               <Link
                 href="/submit"
                 className="px-4 py-2 text-xs font-bold uppercase tracking-tight text-foreground border border-border rounded-xl hover:bg-muted transition-all"
@@ -71,7 +71,7 @@ export default function Header() {
               >
                 Войти
               </Link>
-            </div>
+            </div> */}
 
             {/* Мобильное меню (бургер) */}
             <button
