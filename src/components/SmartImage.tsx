@@ -41,7 +41,7 @@ export default function SmartImage({ id, name, type }: SmartImageProps) {
           />
         ) : (
           <div
-            className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${gradientClass} flex items-center justify-center text-white text-2xl font-black uppercase shadow-lg`}
+            className={`w-16 h-16 rounded-2xl bg-linear-to-br ${gradientClass} flex items-center justify-center text-white text-2xl font-black uppercase shadow-lg`}
           >
             {name[0]}
           </div>
@@ -64,7 +64,7 @@ export default function SmartImage({ id, name, type }: SmartImageProps) {
       ) : (
         <div className="aspect-video w-full rounded-3xl border-2 border-dashed border-border flex flex-col items-center justify-center text-muted-foreground bg-muted/20">
           <div
-            className={`w-12 h-12 rounded-full bg-gradient-to-br ${gradientClass} opacity-20 mb-4`}
+            className={`w-12 h-12 rounded-full bg-linear-to-br ${gradientClass} opacity-20 mb-4`}
           />
           <p className="text-sm font-bold uppercase tracking-widest opacity-50">
             Скриншот скоро появится

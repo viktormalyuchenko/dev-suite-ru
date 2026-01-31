@@ -20,11 +20,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://dev.viktoor.ru"),
   title: {
-    default: "DevTools.ru — Каталог лучших инструментов для разработчиков",
-    template: "%s | DevTools.ru",
+    default: "DevTools — Каталог лучших инструментов для разработчиков",
+    template: "%s | DevTools",
   },
   description:
     "Самая большая база IT-инструментов, сервисов и библиотек на русском языке. Найдите идеальные решения для разработки, дизайна и роста вашего проекта.",
+  verification: {
+    google: "Ihz5Cd5vkNkVuh36pZjbyhECtbKBY5oZu7pMs4t5kXU",
+    yandex: "b07cf790ccd76c61",
+  },
+  robots: "index, follow",
 };
 
 export default function RootLayout({
