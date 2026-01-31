@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@plugin "@tailwindcss/typography";
 
-@theme inline {
+@theme {
+  /* Цвета фона и текста */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Карточки и элементы */
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+
+  /* Текст разной степени важности */
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* Границы и акценты */
+  --color-border: var(--border);
+  --color-primary: #3b82f6; /* Blue 500 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #ffffff;
+  --foreground: #09090b; /* Почти черный */
+  --card: #ffffff;
+  --card-hover: #f4f4f5;
+  --muted: #f4f4f5;
+  --muted-foreground: #4d4d4d;
+  --border: #e4e4e7;
+}
+
+.dark {
+  --background: #141414; /* Твой глубокий фон */
+  --foreground: #fafafa;
+  --card: #1c1c1c;
+  --card-hover: #242424;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --border: #262626;
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply transition-colors duration-300 antialiased;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  input,
+  select,
+  textarea,
+  button,
+  option {
+    font-family: inherit; /* Берет шрифт из body */
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+  }
+
+  /* Убираем странный синий контур в Chrome */
+  *:focus {
+    outline: none;
+  }
+
+  /* Плавная смена всех границ */
+  * {
+    @apply border-border;
+  }
 }
